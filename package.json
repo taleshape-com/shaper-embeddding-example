@@ -1,0 +1,14 @@
+{
+  "name": "shaper-embedding-example",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taleshape-com/shaper-embedding-example.git"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "shaper": "docker run --rm -it -p5454:5454 -v ./data:/data taleshape/shaper"
+  }
+}
