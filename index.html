@@ -10,7 +10,9 @@
     <p>Variables: <code>$VARIABLES</code></p>
     <p>Dashboard will be embedded here:</p>
 
-    <div id="dashboard-container"></div>
+    <div id="dashboard-container">
+      <p>placeholder when shaper is not loaded</p>
+    </div>
 
     <script src="$BASE_URL/embed/shaper.js"></script>
 
@@ -35,7 +37,7 @@
         container: document.getElementById("dashboard-container"),
         dashboardId,
         vars: varsFromQuery("analytics"),
-        async getJwt({ baseUrl }) {
+        async getJwt() {
           const res = await fetch("/api/jwt", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
